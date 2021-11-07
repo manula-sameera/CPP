@@ -1,0 +1,35 @@
+Create an array with 100 elements. Fill data using random number between 0 – 49.
+
+Find the Minimum value of the array  
+Find the Maximum value of the array 
+Find how many elements has Maximum value 
+Calculate the average of values
+Find how many zeros in the array  
+Replace 0th index with minimum value of the array and 99th index with maximum value
+
+------------
+
+Create an integer array inside main method like below. Allow compiler to determine the size.  
+ 	int a[] = { 1, 2, 3, 4, 5 };
+Print the size of the array using sizeof operator inside main() method 
+ Create a function no return value, inter array as a parameter 
+	void testArraySize(int arr[]);
+Print the size of the array inside the function 
+Any comments?
+
+----------------
+
+Create a function taking integer pointer and length as parameters & return nothing to print values in a given array.  
+	void printData(int *p, int len);
+Write the code inside the function to print values of the array by using dereferencing the pointer ( do not use p[i] to print values)
+
+-------------
+
+Create a function taking zero parameters & return a pointer to an array.
+	int *  fillData();
+Write the code inside the function to return an array with data filled with random numbers. Consider the size of the array is 10. rand() function can be used to generate random numbers. 
+Create a pointer in main() & call that function 
+Print the values of the array using another function 
+	int * p;
+	p = fillData();
+	printData(p, 10);
