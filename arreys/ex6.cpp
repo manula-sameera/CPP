@@ -4,7 +4,7 @@ using namespace std;
 
 int * fillData()
 {
-    //int *arr = new int[10];
+    //int *arr = new int[10]; //both are ok
     static int arr[10];
 
 

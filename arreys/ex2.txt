@@ -33,3 +33,18 @@ Print the values of the array using another function
 	int * p;
 	p = fillData();
 	printData(p, 10);
+
+-----------------------
+
+Write a function to update given index return nothing, no parameters 
+Ask user to enter new value to be updated & the location inside your function
+Validate index value & update the array 
+Print if operation is successful
+---------------------------
+
+Write a function to delete given index return nothing, no parameters. 
+Ask user to which index want to delete
+Shift all elements to left 
+Reduce the size 
+Validate before delete
+
