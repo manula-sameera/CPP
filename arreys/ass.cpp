@@ -10,21 +10,21 @@ int data[STUDENT_COUNT][SUBJECT_COUNT];
 
 void main_menu();
 
-void fill_random_data(int arr[STUDENT_COUNT][SUBJECT_COUNT])
+void fill_random_data()
 {
 
     for (size_t i = 0; i < STUDENT_COUNT; i++)
     {
         for (size_t j = 0; j < SUBJECT_COUNT; j++)
         {
-            arr[i][j] = rand() % max_mid + rand() % max_final + rand() % 5;
+            data[i][j] = rand() % max_mid + rand() % max_final + rand() % 5;
         }
     }
     cout << "Data added" << endl;
     main_menu();
 }
 
-void print_all_data(int arr[STUDENT_COUNT][SUBJECT_COUNT])
+void print_all_data()
 {
     cout << "\t-----------------------------------------------" << endl;
     cout << "\t";
@@ -40,14 +40,14 @@ void print_all_data(int arr[STUDENT_COUNT][SUBJECT_COUNT])
         cout << "|" << 1000 + i << "|\t";
         for (size_t j = 0; j < SUBJECT_COUNT; j++)
         {
-            if (arr[i][j] == 0)
+            if (data[i][j] == 0)
             {
                 cout << "NULL"
                      << "\t";
             }
             else
             {
-                cout << arr[i][j] << "\t";
+                cout << data[i][j] << "\t";
             }
         }
         cout << endl;
@@ -55,7 +55,7 @@ void print_all_data(int arr[STUDENT_COUNT][SUBJECT_COUNT])
     main_menu();
 }
 
-void print_totals(int arr[STUDENT_COUNT][SUBJECT_COUNT])
+void print_totals()
 {
     cout << "\tSelect Option :" << endl
          << "\t1: Print Total marks for all students" << endl
@@ -80,7 +80,7 @@ void print_totals(int arr[STUDENT_COUNT][SUBJECT_COUNT])
             }
             cout << sum << endl;
         }
-        print_totals(data);
+        print_totals();
         break;
     case 2:
         cout << "Enter student id : ";
@@ -94,24 +94,24 @@ void print_totals(int arr[STUDENT_COUNT][SUBJECT_COUNT])
                 sum = sum + data[sid - 1000][i];
             }
             cout << "Total marks of student " << sid << " is " << sum << endl;
-            print_totals(data);
+            print_totals();
         }
         else
         {
             cout << "Invalid sid" << endl;
-            print_totals(data);
+            print_totals();
         }
     case 3:
         main_menu();
         break;
     default:
         cout << "Invalid input" << endl;
-        print_totals(data);
+        print_totals();
         break;
     }
 }
 
-void highest_total_marks(int arr[STUDENT_COUNT][SUBJECT_COUNT])
+void highest_total_marks()
 {
     int current_sum = 0;
     int id;
@@ -132,7 +132,7 @@ void highest_total_marks(int arr[STUDENT_COUNT][SUBJECT_COUNT])
     main_menu();
 }
 
-void avg_marks(int arr[STUDENT_COUNT][SUBJECT_COUNT])
+void avg_marks()
 {
     cout << "Enter subject ID : ";
     int sid;
@@ -154,7 +154,7 @@ void avg_marks(int arr[STUDENT_COUNT][SUBJECT_COUNT])
     }
 }
 
-void edit_data(int arr[STUDENT_COUNT][SUBJECT_COUNT])
+void edit_data()
 {
     cout << "Select student id to edit : ";
     int stid;
@@ -194,7 +194,7 @@ void edit_data(int arr[STUDENT_COUNT][SUBJECT_COUNT])
     }
 }
 
-void reset_data(int arr[STUDENT_COUNT][SUBJECT_COUNT])
+void reset_data()
 {
     cout << "\t1: Reset marks for a given subject" << endl
          << "\t2: Reset marks for a given student" << endl
@@ -277,25 +277,25 @@ void main_menu()
         exit(0);
         break;
     case 1:
-        fill_random_data(data);
+        fill_random_data();
         break;
     case 2:
-        print_all_data(data);
+        print_all_data();
         break;
     case 3:
-        print_totals(data);
+        print_totals();
         break;
     case 4:
-        highest_total_marks(data);
+        highest_total_marks();
         break;
     case 5:
-        avg_marks(data);
+        avg_marks();
         break;
     case 6:
-        edit_data(data);
+        edit_data();
         break;
     case 7:
-        reset_data(data);
+        reset_data();
         break;
     default:
         cout << "Invalid input" << endl;
