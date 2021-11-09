@@ -1,30 +1,75 @@
 #include <iostream>
 
+
 using namespace std;
+int len;
+int arr[100];
 
-void filldata(int arr[],int length){
-
-    for (size_t i = 0; i < length; i++)
+void filldata(){
+    cout<<"Enter length : ";
+    cin>>len;
+    for (size_t i = 0; i < len; i++)
     {
         arr[i]=rand();
     }
 }
 
-void printdata(int arr[],int length){
-    for (size_t i = 0; i < length; i++)
+void printdata(){
+    for (size_t i = 0; i < len; i++)
     {
         cout<<"Index "<<i<<" = "<<arr[i]<<endl;
     }
     
 }
 
+void deletedata(){
+    cout<<"Enter Index to delete";
+    int index;
+    cin>>index;
+    len=len-1;
+    for (size_t i = index; i < len; i++)
+    {
+        arr[i]=arr[i+1];
+    }
+    
+}
+
+void updatedata(){
+    cout<<"Enter new value : ";
+    int val;
+    cin>>val;
+    cout<<"Enter index : ";
+    int index;
+    cin>>index;
+
+    arr[index]=val;
+}
+
+void search(){
+    cout<<"Enter number to search : ";
+    int num;
+    cin>>num;
+
+    for (int i = 0; i < len; i++)
+    {
+       if (arr[i]==num)
+       {
+           cout<<"Found in index "<<i<<endl;
+           break;
+       }
+       
+    }
+    
+}
+
 int main()
 {
-    int len;
-    cout<<"Enter arrey length between 0-100 : ";
-    cin>>len;
-    int arr[len];
-
-    filldata(arr,len);
-    printdata(arr,len);
+    
+    filldata();
+    printdata();
+    // deletedata();
+    // printdata();
+    // updatedata();
+    // printdata();
+    search();
 }
