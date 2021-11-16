@@ -1,0 +1,16 @@
+Create stack object using template
+Ask user to enter 5 positive numbers  
+When pushing to stack encode the value using following  Formula
+	𝑭(𝒏)=𝒏^𝟐+𝟏
+
+Display all values in the stack 
+Ask user how many to be pop-out (less than size) 
+While popping out decode the stack value return original value.
+
+
+
+Create a header file called myNumbers.h
+Add a class to hold 2 public variables which represent a point (my2Dpoint)
+Add functions to reset(), print() and add(int a, int b) another point 
+Include that header file in main program and create an object 
+Create another point & add to previous point & print results
