@@ -4,7 +4,8 @@
         "ostream": "cpp",
         "bitset": "cpp",
         "chrono": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "new": "cpp"
     },
     "maven.view": "hierarchical",
     "php.validate.executablePath": "C:/xampp/php"
