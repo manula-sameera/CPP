@@ -17,7 +17,15 @@ void fill_random_data()
     {
         for (size_t j = 0; j < SUBJECT_COUNT; j++)
         {
-            data[i][j] = rand() % max_mid + rand() % max_final + rand() % 5;
+            int marks =  rand() % max_mid+1 + rand() % max_final+1 + rand() % 6;
+            //data[i][j] = rand() % max_mid+1 + rand() % max_final+1 + rand() % 6;
+            if (marks>100)
+            {
+                j--;
+            }else{
+               data[i][j]=marks; 
+            }
+            
         }
     }
     cout << "Data added" << endl;
@@ -268,7 +276,6 @@ void main_menu()
          << "5: Print average marks for a given subject" << endl
          << "6: Edit marks for a given student for a given subject" << endl
          << "7: Reset Data" << endl
-         << "8: Exit" << endl
          << "select option :";
     int input;
     cin >> input;
@@ -297,9 +304,6 @@ void main_menu()
         break;
     case 7:
         reset_data();
-        break;
-    case 8:
-        exit(0);
         break;
     default:
         cout << "Invalid input" << endl;
