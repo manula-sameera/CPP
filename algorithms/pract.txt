@@ -1,0 +1,4 @@
+Write a function to swapNumbers 2 array elements 
+Write another function to test swap() function 
+Create an integer array arr with 10 elements  & fill with some random data
+Using above swap function swap first & last element
