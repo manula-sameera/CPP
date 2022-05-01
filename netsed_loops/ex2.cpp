@@ -2,13 +2,16 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
 
-    for(int a = 5;a>=1;a--){
-        for (int b=1;b<=a;b++){
-            cout<<"*";
+    for (int a = 5; a >= 1; a--)//outer
+    {
+        for (int b = 1; b <= a; b++)//inner
+        {
+            cout << "*";
         }
-        cout<<endl;
+        cout << endl;
     }
 
     return 0;
