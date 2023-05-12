@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<planes>
+  <plane>
+    <name>Boeing 747</name>
+    <manufacturer>Boeing</manufacturer>
+    <year>1969</year>
+  </plane>
+  <plane>
+    <name>Airbus A380</name>
+    <manufacturer>Airbus</manufacturer>
+    <year>2005</year>
+  </plane>
+  <plane>
+    <name>Embraer E-Jet</name>
+    <manufacturer>Embraer</manufacturer>
+    <year>2002</year>
+  </plane>
+</planes>

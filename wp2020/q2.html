@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en" >
+<head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <div ng-controller="myController">
+        <form name="myForm" >
+            <input type="number" ng-model="num1" placeholder="Enter first number" required><br/>
+            <input type="number" ng-model="num2" placeholder="Enter second number" required><br/>
+            <input type="text" ng-model="nametxt" placeholder="Enter your name" required><br/>
+            <input type="button" ng-click="calculate()" value="submit">
+        </form>
+        <!-- show name and sum -->
+        <h1>Hi {{name}}!</h1>
+        <h2>Sum of two numbers is {{sum}}</h2>
+
+        <script>
+            //show name and sum of two numbers
+            var app = angular.module('myApp', []);
+            //controller
+            app.controller('myController', function($scope) {
+                $scope.num1 = 0;
+                $scope.num2 = 0;
+                $scope.name = "";
+                $scope.sum = 0;
+                $scope.calculate = function() {
+                    $scope.sum = parseInt($scope.num1) + parseInt($scope.num2);
+                    $scope.sum = parseInt($scope.num1) + parseInt($scope.num2);
+                    $scope.name = $scope.nametxt;
+                };
+            });
+
+        </script>
+    </div>
+</body>
+</html>

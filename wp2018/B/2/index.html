@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <title>2</title>
+  </head>
+  <body>
+    <script>
+      angular.module("myApp", []).controller("myController", function ($scope) {
+        $scope.calculateOutput = function () {
+          $scope.output = $scope.input1 * $scope.input2 + $scope.input3;
+        };
+      });
+    </script>
+    <div ng-app="myApp" ng-controller="myController">
+      <form ng-submit="calculateOutput()">
+        <label for="input1">Input 1:</label>
+        <input type="number" id="input1" ng-model="input1" /><br />
+        <label for="input2">Input 2:</label>
+        <input type="number" id="input2" ng-model="input2" /><br />
+        <label for="input3">Input 3:</label>
+        <input type="number" id="input3" ng-model="input3" /><br />
+        <button type="submit">Calculate Output</button>
+      </form>
+
+      <p ng-show="output">Output: {{output}}</p>
+    </div>
+  </body>
+</html>
